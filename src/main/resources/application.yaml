@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        # native:
+          # search-locations: "classpath:/config"
+          # search-locations: "file:///Users//eazybytes//Documents//config"
+        git:
+          uri: "https://github.com/vilas639/configserverfile.git"
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true     
